@@ -1,4 +1,10 @@
 pipeline {
+ stages {
+ stage('checkout') {
+ steps {
+ git branch: 'master', url: 'https://github.com/savvyfulmali06/practice'
+ }
+ }
  stage('Set Terraform path') {
  steps {
  script {
@@ -17,6 +23,7 @@ pipeline {
  sh 'terraform plan -out=plan'
  // sh ‘terraform destroy -auto-approve’
  sh 'terraform apply plan'
+ }
  }
  }
  }
