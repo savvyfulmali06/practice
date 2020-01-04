@@ -1,8 +1,8 @@
 node{
 stage('initiating'){
-def var = callFunc('calling funcation')
+def var1 = callFunc('calling funcation')
 }
-callFunc(String text){
+def callFunc(String text){
 echo text
 }
 }
