@@ -7,7 +7,7 @@ pipelineJob('test'){
     }
   definition{
     cps{
-      script(readFileFromWorkspace(test1.groovy))
+      script('logic-here')
       sandbox()
       }
     }
