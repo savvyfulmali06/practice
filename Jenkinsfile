@@ -1,21 +1,14 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+pipelineJob('DSL_Pipeline'){
+  description('test first pipeline job')
+  logRotator(5,5)
+  parameters{
+    choiceParam('Select','True','False')
+    stringParam('This is String parameter example')
     }
-}
+  definition{
+    cps{
+      script('logic-here')
+      sandbox()
+      }
+    }
+  }
