@@ -1,4 +1,4 @@
-pipelineJob('test'){
+pipelineJob('DSL_Pipeline'){
   description('test first pipeline job')
   logRotator(5,5)
   parameters{
