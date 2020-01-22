@@ -1,4 +1,5 @@
-listView('All'){
+views{
+ listView('All'){
 description('all jobs')
 jobs{
 name('admin-seed-job')
@@ -11,5 +12,6 @@ lastSuccess()
 lastFailure()
 lastDuration()
 buildButton()
+}
 }
 }
