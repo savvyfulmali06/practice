@@ -2,7 +2,7 @@ pipelineJob('DSL_Pipeline'){
   description('test first pipeline job')
   logRotator(5,5)
   parameters{
-    choiceParam('Select','True','False')
+    choiceParam('Select',['True','False'])
     stringParam('This is String parameter example')
     }
   definition{
